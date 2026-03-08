@@ -1446,22 +1446,31 @@ a:hover {
 .impact-kpis {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-sm);
+  gap: var(--space-md);
   margin-bottom: var(--space-lg);
 }
 
 .impact-kpi {
-  padding: var(--space-md);
-  background: var(--color-surface);
-  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(160deg, var(--color-bg-alt) 0%, var(--color-surface) 100%);
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   text-align: center;
-  transition: border-color var(--duration) var(--ease-out), box-shadow var(--duration) var(--ease-out);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform var(--duration) var(--ease-out), box-shadow var(--duration) var(--ease-out),
+    border-color var(--duration) var(--ease-out);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .impact-kpi:hover {
+  transform: translateY(-4px);
   border-color: var(--color-accent-soft);
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 .impact-kpi-value {

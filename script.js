@@ -144,40 +144,48 @@
   }
 
   // ----- Impact slider: update output, KPIs, and description -----
-  const impactSlider = document.getElementById('impact-slider');
-  const impactOutput = document.getElementById('impact-slider-value');
-  const impactDesc = document.getElementById('impact-slider-desc');
-  const impactDescN = document.getElementById('impact-desc-n');
-  const impactDescFamily = document.getElementById('impact-desc-family');
-  const kpiFamily = document.getElementById('kpi-family');
-  const kpiEducation = document.getElementById('kpi-education');
-  const kpiMeals = document.getElementById('kpi-meals');
-  const kpiCommunities = document.getElementById('kpi-communities');
+  function initImpactSlider() {
+    const impactSlider = document.getElementById('impact-slider');
+    const impactOutput = document.getElementById('impact-slider-value');
+    const impactDescN = document.getElementById('impact-desc-n');
+    const impactDescFamily = document.getElementById('impact-desc-family');
+    const kpiFamily = document.getElementById('kpi-family');
+    const kpiEducation = document.getElementById('kpi-education');
+    const kpiMeals = document.getElementById('kpi-meals');
+    const kpiCommunities = document.getElementById('kpi-communities');
 
-  function formatNum(n) {
-    return n.toLocaleString('en-IN');
+    function formatNum(n) {
+      return n.toLocaleString('en-IN');
+    }
+
+    function updateImpactSlider() {
+      if (!impactSlider) return;
+      const n = parseInt(impactSlider.value, 10);
+      const family = n * 4;
+      const education = Math.round(n * 2);
+      const meals = Math.round(n * 4.5);
+      const communities = Math.max(1, Math.round(n / 50));
+
+      if (impactOutput) impactOutput.textContent = formatNum(n);
+      if (kpiFamily) kpiFamily.textContent = formatNum(family);
+      if (kpiEducation) kpiEducation.textContent = formatNum(education);
+      if (kpiMeals) kpiMeals.textContent = formatNum(meals);
+      if (kpiCommunities) kpiCommunities.textContent = formatNum(communities);
+      if (impactDescN) impactDescN.textContent = formatNum(n);
+      if (impactDescFamily) impactDescFamily.textContent = formatNum(family);
+    }
+
+    if (impactSlider) {
+      impactSlider.addEventListener('input', updateImpactSlider);
+      impactSlider.addEventListener('change', updateImpactSlider);
+      updateImpactSlider();
+    }
   }
 
-  function updateImpactSlider() {
-    if (!impactSlider) return;
-    const n = parseInt(impactSlider.value, 10);
-    const family = n * 4;
-    const education = Math.round(n * 2);
-    const meals = Math.round(n * 4.5);
-    const communities = Math.max(1, Math.round(n / 50));
-
-    if (impactOutput) impactOutput.textContent = formatNum(n);
-    if (kpiFamily) kpiFamily.textContent = formatNum(family);
-    if (kpiEducation) kpiEducation.textContent = formatNum(education);
-    if (kpiMeals) kpiMeals.textContent = formatNum(meals);
-    if (kpiCommunities) kpiCommunities.textContent = formatNum(communities);
-    if (impactDescN) impactDescN.textContent = formatNum(n);
-    if (impactDescFamily) impactDescFamily.textContent = formatNum(family);
-  }
-
-  if (impactSlider) {
-    impactSlider.addEventListener('input', updateImpactSlider);
-    updateImpactSlider();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initImpactSlider);
+  } else {
+    initImpactSlider();
   }
 
   // ----- Smooth scroll for anchor links -----
