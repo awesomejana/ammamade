@@ -17,6 +17,13 @@
 
   <!-- Header -->
   <header class="site-header" role="banner">
+    <div class="trust-strip" aria-hidden="true">
+      <span>100% vegetarian</span>
+      <span class="trust-dot" aria-hidden="true"></span>
+      <span>Women-led</span>
+      <span class="trust-dot" aria-hidden="true"></span>
+      <span>India</span>
+    </div>
     <div class="header-inner">
       <a href="#" class="logo" aria-label="Amma Made — Home">
         <img src="logo.png" alt="Amma Made" width="140" height="48">
@@ -69,11 +76,13 @@
           <div class="hero-content">
             <p class="hero-label animate-in">Quality, care, community.</p>
             <h1 id="hero-heading" class="hero-title animate-in">Amma Made</h1>
+            <p class="hero-pitch animate-in">A vegetarian snack brand that creates jobs for rural women and brings homestyle Indian snacks to offices and retail.</p>
             <p class="hero-desc animate-in">Healthy snacks at accessible prices. Livelihoods for women through food and skill.</p>
+            <p class="hero-proof animate-in">4,500+ rural women trained through partner NGOs (2020–2024).</p>
             <div class="hero-cta animate-in">
-              <a href="#our-products" class="btn btn-primary btn-glass">Shop Products</a>
-              <a href="#our-story" class="btn btn-secondary">Our Story</a>
-              <a href="#partner" class="btn btn-outline btn-glass-outline">Partner With Us</a>
+              <a href="#partner" class="btn btn-primary btn-glass btn-cta-primary">Partner With Us</a>
+              <a href="#our-products" class="btn btn-secondary btn-cta-secondary">Our Products</a>
+              <a href="#our-story" class="btn btn-outline btn-glass-outline btn-cta-secondary">Our Story</a>
             </div>
           </div>
         </div>
@@ -158,6 +167,7 @@
           <div class="founder-content animate-in">
             <h2 id="founder-heading" class="section-title">Our Founder</h2>
             <p class="founder-name"><a href="https://in.linkedin.com/in/sanjana-hiremath7" target="_blank" rel="noopener noreferrer">Sanjana Hiremath</a></p>
+            <p class="founder-cred">Social entrepreneur · 4,500+ women trained</p>
             <p class="founder-meta">From Hubballi, a small town in Karnataka.</p>
             <p class="founder-text">Passionate about social impact, Sanjana has trained over 4,500 rural women across the country through several NGOs. Many of those women are now independent and confident entrepreneurs. Amma Made is built on that same belief—turning skill and care into opportunity.</p>
           </div>
@@ -230,9 +240,21 @@
             <span>Regional specialties</span>
           </li>
         </ul>
-        <div class="products-visual-wrap animate-in">
-          <div class="products-visual products-visual--glass">
-            <img src="product-hero.png" alt="Traditional Indian sweets and homestyle snacks" width="640" height="640">
+        <div class="products-deck animate-in" role="list">
+          <div class="product-card product-card--glass" role="listitem">
+            <img src="product-hero.png" alt="Gajar ka halwa and Indian sweets" width="320" height="320">
+          </div>
+          <div class="product-card product-card--glass" role="listitem">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80" alt="Vegetarian Indian snacks and fritters" width="320" height="320">
+          </div>
+          <div class="product-card product-card--glass" role="listitem">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80" alt="Indian vegetarian thali and homestyle food" width="320" height="320">
+          </div>
+          <div class="product-card product-card--glass" role="listitem">
+            <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=80" alt="Indian vegetarian meal platter" width="320" height="320">
+          </div>
+          <div class="product-card product-card--glass" role="listitem">
+            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80" alt="Fresh Indian vegetarian dishes" width="320" height="320">
           </div>
         </div>
       </div>
@@ -341,6 +363,7 @@
           <div class="partner-content animate-in">
             <h2 id="partner-heading" class="section-title">Partner With Us</h2>
             <p>We partner with offices, retail, malls, and institutions. Great food and women-led production—together.</p>
+            <p class="partner-looking"><strong>We’re looking for:</strong> distribution partners, corporate gifting, retail listings, and impact-minded collaborators.</p>
             <a href="#contact" class="btn btn-primary">Get in Touch</a>
           </div>
           <div class="partner-img animate-in">
@@ -354,19 +377,35 @@
     <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
       <div class="container">
         <h2 id="contact-heading" class="section-title text-center animate-in">Contact</h2>
+        <p class="contact-intro animate-in">Email us at <a href="mailto:ammamadeindia@gmail.com">ammamadeindia@gmail.com</a> for partnerships, orders, and enquiries.</p>
         <div class="contact-grid">
-          <div class="contact-block animate-in">
-            <h3>Location</h3>
-            <p>Hubballi, Karnataka</p>
-          </div>
-          <div class="contact-block animate-in">
-            <h3>Email</h3>
-            <p><a href="mailto:ammamadeindia@gmail.com">ammamadeindia@gmail.com</a></p>
-          </div>
-          <div class="contact-block animate-in">
-            <h3>Connect</h3>
-            <p><a href="#" aria-label="Social media">Social Media</a></p>
-          </div>
+          <a href="https://www.google.com/maps/search/Hubballi+Karnataka" target="_blank" rel="noopener noreferrer" class="contact-block contact-block--link animate-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span class="contact-block-content">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Hubballi, Karnataka</span>
+            </span>
+          </a>
+          <a href="mailto:ammamadeindia@gmail.com" class="contact-block contact-block--link animate-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span class="contact-block-content">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">ammamadeindia@gmail.com</span>
+            </span>
+          </a>
+          <a href="https://in.linkedin.com/in/sanjana-hiremath7" target="_blank" rel="noopener noreferrer" class="contact-block contact-block--link animate-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </span>
+            <span class="contact-block-content">
+              <span class="contact-label">Connect</span>
+              <span class="contact-value">LinkedIn</span>
+            </span>
+          </a>
         </div>
       </div>
     </section>
@@ -394,6 +433,59 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to top (floating arrow, bottom right) -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Hidden admin key (bottom left) -->
+  <button type="button" id="admin-key-btn" class="admin-key-btn" aria-label="Admin" title="Admin">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+  </button>
+
+  <!-- Admin popup -->
+  <div id="admin-popup" class="admin-popup" role="dialog" aria-modal="true" aria-labelledby="admin-title" aria-hidden="true">
+    <div class="admin-popup-backdrop"></div>
+    <div class="admin-popup-box">
+      <div class="admin-popup-auth" id="admin-auth">
+        <h2 id="admin-title" class="admin-popup-title">Admin</h2>
+        <form id="admin-form" class="admin-form">
+          <input type="password" id="admin-password" class="admin-input" placeholder="Password" autocomplete="off" inputmode="numeric" maxlength="8">
+          <button type="submit" class="btn btn-primary">Unlock</button>
+        </form>
+        <p id="admin-auth-error" class="admin-error" aria-live="polite"></p>
+      </div>
+      <div class="admin-popup-dashboard" id="admin-dashboard" hidden>
+        <div class="admin-popup-header">
+          <h2 class="admin-popup-title">Analytics</h2>
+          <button type="button" id="admin-close" class="admin-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="admin-kpis">
+          <div class="admin-kpi"><span class="admin-kpi-value" id="kpi-pageviews">0</span><span class="admin-kpi-label">Page views</span></div>
+          <div class="admin-kpi"><span class="admin-kpi-value" id="kpi-unique">0</span><span class="admin-kpi-label">Unique IPs</span></div>
+          <div class="admin-kpi"><span class="admin-kpi-value" id="kpi-today">0</span><span class="admin-kpi-label">Today</span></div>
+        </div>
+        <div class="admin-table-wrap">
+          <h3 class="admin-table-title">Access log</h3>
+          <div class="admin-table-scroll">
+            <table class="admin-table" id="admin-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>IP</th>
+                  <th>Time (IST)</th>
+                  <th>User agent</th>
+                  <th>Referrer</th>
+                </tr>
+              </thead>
+              <tbody id="admin-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
